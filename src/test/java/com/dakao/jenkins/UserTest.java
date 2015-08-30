@@ -13,9 +13,9 @@ public class UserTest {
 		assertEquals(u.getName(), "teach.d");
 	}
 	
-//	@Test
-//	public void failed(){
-//		User u = new User("teach.d", "123");
-//		assertEquals(u.getName(), "asd");
-//	}
+	@Test
+	public void failed(){
+		User u = new User("teach.d", "123");
+		assertEquals(u.getName(), "asd");
+	}
 }

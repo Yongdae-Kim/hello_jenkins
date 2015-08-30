@@ -15,7 +15,6 @@
 	</properties>
 
 	<!-- #################### 젠킨스 테스트 #################### -->
-	<!--
 	<parent>
 		<groupId>org.jenkins-ci.plugins</groupId>
 		<artifactId>plugin</artifactId>
@@ -32,7 +31,6 @@
 			<url>http://repo.jenkins-ci.org/public</url>
 		</repository>
 	</repositories>
-	-->
 	<!-- ####################################################### -->
 
 	<dependencies>
