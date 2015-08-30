@@ -13,7 +13,9 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
+
 	<!-- #################### 젠킨스 테스트 #################### -->
+	<!--
 	<parent>
 		<groupId>org.jenkins-ci.plugins</groupId>
 		<artifactId>plugin</artifactId>
@@ -30,6 +32,7 @@
 			<url>http://repo.jenkins-ci.org/public</url>
 		</repository>
 	</repositories>
+	-->
 	<!-- ####################################################### -->
 
 	<dependencies>
