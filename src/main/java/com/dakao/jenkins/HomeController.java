@@ -2,6 +2,7 @@ package com.dakao.jenkins;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -16,24 +17,38 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(HomeController.class);
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
+
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println("########## " + i + " step ##########");
+			sleep(20);
+		}
 		
 		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,
+				DateFormat.LONG, locale);
+
 		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
+
+		model.addAttribute("serverTime", formattedDate);
+
 		return "home";
 	}
-	
+
+	public void sleep(int sec) {
+		try {
+			Thread.sleep(sec * 1000);
+		} catch (InterruptedException e) {
+		}
+	}
 }
