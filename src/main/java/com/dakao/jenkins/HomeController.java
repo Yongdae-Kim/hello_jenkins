@@ -28,12 +28,6 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 
-		
-		for (int i = 0; i < 10; i++) {
-			logger.debug("########## " + i + " step ##########");
-			sleep(20);
-		}
-		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,
 				DateFormat.LONG, locale);
@@ -45,10 +39,4 @@ public class HomeController {
 		return "home";
 	}
 
-	public void sleep(int sec) {
-		try {
-			Thread.sleep(sec * 1000);
-		} catch (InterruptedException e) {
-		}
-	}
 }
