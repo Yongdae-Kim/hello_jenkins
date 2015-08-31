@@ -1,7 +1,5 @@
-task hello << {
-	(1..5).each {
-		println ""
-		println "********** ${it} step, Gradle Timer is ${new Date()}. **********"
-		sleep(1000)
-	}
-}
+task mySchedule << { prinln "hello~ gradle" }
+task mySchedule1 << { prinln "hello~ gradle1" }
+task mySchedule2 << { prinln "hello~ gradle2" }
+task mySchedule3 << { prinln "hello~ gradle3" }
+task mySchedule4 << { prinln "hello~ gradle4" }
