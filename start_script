@@ -2,9 +2,9 @@ echo "##################################################"
 echo "hellog~ jenkins"
 echo "##################################################"
 
-Duration=5
+Duration=10
 for ((i=0;i<$Duration;i++)); do
-  slepp 5
+  sleep 5
   echo "$i"
 done
 
