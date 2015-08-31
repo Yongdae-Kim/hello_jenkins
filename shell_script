@@ -1,0 +1,7 @@
+Duration=10
+for ((i=0;i<$Duration;i++)); do
+  sleep 1
+  NowDate=`date`
+  echo "*************** $i/9 step $NowDate ***************"
+done
+
