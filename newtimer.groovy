@@ -1,23 +1,6 @@
-// File: newtimer.groovy
-class GroovyTimerTask extends TimerTask {
-    Closure closure
-    void run() {
-        closure()
-    }
+(1..10).each {
+	println ""
+	println "********** ${it} step, Current date is ${new Date()}. **********"
+	sleep(2000)
 }
 
-class TimerMethods {
-    static TimerTask runEvery(Timer timer, long delay, long period, Closure codeToRun) {
-        TimerTask task = new GroovyTimerTask(closure: codeToRun)
-        timer.schedule task, delay, period
-        task
-    }
-}
-
-use (TimerMethods) {
-    def timer = new Timer()
-    def task = timer.runEvery(100, 10) {
-        println "Task executed at ${new Date()}."
-    }
-    println "Current date is ${new Date()}."
-}
