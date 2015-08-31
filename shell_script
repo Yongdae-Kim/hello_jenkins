@@ -1,4 +1,4 @@
-Duration=10
+Duration=5
 for ((i=0;i<$Duration;i++)); do
   sleep 1
   NowDate=`date`
