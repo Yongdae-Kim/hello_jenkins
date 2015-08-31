@@ -5,6 +5,8 @@ echo "##################################################"
 Duration=10
 for ((i=0;i<$Duration;i++)); do
   sleep 2
+  NowDate=`date`
+  echo $NowDate
   echo "*************** $i/9 step ***************"
 done
 

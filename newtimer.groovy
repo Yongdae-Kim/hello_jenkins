@@ -16,7 +16,7 @@ class TimerMethods {
 
 use (TimerMethods) {
     def timer = new Timer()
-    def task = timer.runEvery(1000, 5000) {
+    def task = timer.runEvery(100, 500) {
         println "Task executed at ${new Date()}."
     }
     println "Current date is ${new Date()}."
