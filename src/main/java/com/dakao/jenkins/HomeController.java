@@ -30,7 +30,7 @@ public class HomeController {
 
 		
 		for (int i = 0; i < 10; i++) {
-			System.out.println("########## " + i + " step ##########");
+			logger.debug("########## " + i + " step ##########");
 			sleep(20);
 		}
 		
